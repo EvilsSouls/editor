@@ -1,11 +1,11 @@
-import { decodeTemplate } from "../main/main"
+import { decodeTemplate } from "../main/main";
 import { ParameterTypesType } from "./ts/actiondump";
 
 export interface Template {
     blocks: Block[]
 }
 
-export type ItemType = 'txt' | 'num' | 'loc' | 'vec' | 'snd' | 'part' | 'pot' | 'var' | 'g_val'
+export type ItemType = 'txt' | 'num' | 'loc' | 'vec' | 'snd' | 'part' | 'pot' | 'var' | 'g_val';
 export type VarScope = keyof typeof SCOPE_TO_NAME_MAP;
 export const SCOPE_TO_NAME_MAP = { saved: "SAVED", unsaved: "GAME", local: "LOCAL", line: "LINE" } as const;
 export enum ScopeName {
@@ -15,18 +15,18 @@ export enum ScopeName {
     line = "LINE",
 
 }
-export type GvalSelection = "Selection" | "Default" | "Victim" | "Killer" | "Damager" | "Shooter" | "Projectile" | "LastEntity"
+export type GvalSelection = "Selection" | "Default" | "Victim" | "Killer" | "Damager" | "Shooter" | "Projectile" | "LastEntity";
 export const SELECTION_VALUES = ["", "AllPlayers", "Selection", "Default", "Victim", "Killer", "Damager", "Shooter", "Projectile", "LastEntity"] as const;
 
-export type ID = "block" | "bracket" | "killable"
+export type ID = "block" | "bracket" | "killable";
 /**
  * @deprecated DF Now used attribute.
  */
 export type Inverted = "" | "NOT" // funny
 export type Attribute = "" | "NOT" | "LS-CANCEL";
-export type Target = "" | "AllPlayers" | "Victim" | "Shooter" | "Damager" | "Killer" | "Default" | "Selection" | "Projectile" | "LastEntity"
-export type Direction = "open" | "close"
-export type BracketType = "norm" | "repeat"
+export type Target = "" | "AllPlayers" | "Victim" | "Shooter" | "Damager" | "Killer" | "Default" | "Selection" | "Projectile" | "LastEntity";
+export type Direction = "open" | "close";
+export type BracketType = "norm" | "repeat";
 
 export type BlockID = BlockActionID | BlockSubActionID | BlockDataID | "else";
 export type BlockActionID = "event" | "player_action" | "entity_event" | "entity_action" | "set_var" | "game_action" | "if_game" | "control" | "if_entity" | "if_player" | "if_var";
@@ -45,13 +45,13 @@ export const DEFAULT_DATA_BLOCKS_TAGS: Record<BlockDataID, { item: { id: "bl_tag
 };
 
 /** Everything that can be in the array. Killable is used for filtering. */
-export type Block = PhysicalBlock | Killable
+export type Block = PhysicalBlock | Killable;
 /** All types placed by the player */
-export type PlacedBlock = ArgumentBlock | DataBlock | Else
+export type PlacedBlock = ArgumentBlock | DataBlock | Else;
 /** All the types with arguments */
-export type ArgumentBlock = SelectionBlock | SubActionBlock
+export type ArgumentBlock = SelectionBlock | SubActionBlock;
 /** All types that appear in the codespace */
-export type PhysicalBlock = PlacedBlock | Bracket
+export type PhysicalBlock = PlacedBlock | Bracket;
 
 export enum VarScopeEnum {
     local = "LOCAL",
@@ -116,7 +116,7 @@ export interface Argument<i extends Item> {
 
 // Item Code ========================================================
 
-export type DefinedItems = NumberVal | Text | Component | Variable | Location | Vector | Potion | Sound | GameValue | Particle | BlockTag | ChestItem | Parameter
+export type DefinedItems = NumberVal | Text | Component | Variable | Location | Vector | Potion | Sound | GameValue | Particle | BlockTag | ChestItem | Parameter;
 export type Item = UndefinedItem | DefinedItems;
 
 export interface NumberVal {
@@ -279,6 +279,7 @@ export interface ParsedItem {
         id: string;
     }>
 }
+
 export interface NbtValue<t> {
     value: t;
 }
