@@ -51,6 +51,8 @@ export interface Icon {
     description: string[];
     name: string;
 }
+
+
 export interface Tag {
     name: string;
     options: {
@@ -100,8 +102,8 @@ export interface ParticleCategory {
     category: ParticleCategoryName;
     fields: particleField[];
 }
-export type ParticleCategoryName = 'Ambient Particles' | 'Entity Behavior Particles' | 'Ambient Entity Particles' | 'Entity Attack Particles' | 'Liquid Particles' | 'Ambient Block Particles' | 'Block Behavior Particles'
-export type particleField = 'Motion' | 'Motion Variation' | 'Color' | 'Color Variation' | 'Material' | 'Size' | 'Size Variation'
+export type ParticleCategoryName = 'Ambient Particles' | 'Entity Behavior Particles' | 'Ambient Entity Particles' | 'Entity Attack Particles' | 'Liquid Particles' | 'Ambient Block Particles' | 'Block Behavior Particles';
+export type particleField = 'Motion' | 'Motion Variation' | 'Color' | 'Color Variation' | 'Material' | 'Size' | 'Size Variation';
 
 export interface Particle {
     particle: string;
@@ -127,7 +129,7 @@ export const ItemTypeColors = {
     g_val: '#ffd47f',
     bl_tag: '#fbfb54',
     pn_el: '#aaffaa',
-} as const
+} as const;
 export const ItemTypeNames = {
     txt: 'String',
     comp: 'Text',
@@ -144,11 +146,11 @@ export const ItemTypeNames = {
     dict: 'Dictionary',
     g_val: 'Game Value',
     pn_el: 'Parameter'
-} as const
-export const ParameterTypes = ['txt','comp','num','loc','vec','snd','part','pot','item', 'any','var','list','dict'] as const
+} as const;
+export const ParameterTypes = ['txt','comp','num','loc','vec','snd','part','pot','item', 'any','var','list','dict'] as const;
 export type ParameterTypesType = typeof ParameterTypes[number];
 
 export type CodeBlockIdentifier = BlockID;
 export type CodeBlockName = "PLAYER ACTION" | "IF PLAYER" | "START PROCESS" | "CALL FUNCTION" | "CONTROL" | "SET VARIABLE" | "ENTITY EVENT" | "PLAYER EVENT" | "FUNCTION" | "IF ENTITY" | "ENTITY ACTION" | "IF VARIABLE" | "SELECT OBJECT" | "GAME ACTION" | "ELSE" | "PROCESS" | "REPEAT" | "IF GAME";
-export enum CodeBlockTypeName { player_action = "PLAYER ACTION", if_player = "IF PLAYER", start_process = "START PROCESS", call_func = "CALL FUNCTION", control = "CONTROL", set_var = "SET VARIABLE", entity_event = "ENTITY EVENT", event = "PLAYER EVENT", func = "FUNCTION", if_entity = "IF ENTITY", entity_action = "ENTITY ACTION", if_var = "IF VARIABLE", select_obj = "SELECT OBJECT", game_action = "GAME ACTION", else = "ELSE", process = "PROCESS", repeat = "REPEAT", if_game = "IF GAME" }
-export enum CodeBlockNameType { "PLAYER ACTION" = 'player_action', "IF PLAYER" = 'if_player', "START PROCESS" = 'start_process', "CALL FUNCTION" = 'call_func', "CONTROL" = 'control', "SET VARIABLE" = 'set_var', "ENTITY EVENT" = 'entity_event', "PLAYER EVENT" = 'event', "FUNCTION" = 'func', "IF ENTITY" = 'if_entity', "ENTITY ACTION" = 'entity_action', "IF VARIABLE" = 'if_var', "SELECT OBJECT" = 'select_obj', "GAME ACTION" = 'game_action', "ELSE" = 'else', "PROCESS" = 'process', "REPEAT" = 'repeat', "IF GAME" = 'if_game' }
+export enum CodeBlockTypeName { player_action = "PLAYER ACTION", if_player = "IF PLAYER", start_process = "START PROCESS", call_func = "CALL FUNCTION", control = "CONTROL", set_var = "SET VARIABLE", entity_event = "ENTITY EVENT", event = "PLAYER EVENT", func = "FUNCTION", if_entity = "IF ENTITY", entity_action = "ENTITY ACTION", if_var = "IF VARIABLE", select_obj = "SELECT OBJECT", game_action = "GAME ACTION", else = "ELSE", process = "PROCESS", repeat = "REPEAT", if_game = "IF GAME" };
+export enum CodeBlockNameType { "PLAYER ACTION" = 'player_action', "IF PLAYER" = 'if_player', "START PROCESS" = 'start_process', "CALL FUNCTION" = 'call_func', "CONTROL" = 'control', "SET VARIABLE" = 'set_var', "ENTITY EVENT" = 'entity_event', "PLAYER EVENT" = 'event', "FUNCTION" = 'func', "IF ENTITY" = 'if_entity', "ENTITY ACTION" = 'entity_action', "IF VARIABLE" = 'if_var', "SELECT OBJECT" = 'select_obj', "GAME ACTION" = 'game_action', "ELSE" = 'else', "PROCESS" = 'process', "REPEAT" = 'repeat', "IF GAME" = 'if_game' };
