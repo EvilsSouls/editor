@@ -22,7 +22,7 @@ export type ID = "block" | "bracket" | "killable";
 /**
  * @deprecated DF Now used attribute.
  */
-export type Inverted = "" | "NOT" // funny
+export type Inverted = "" | "NOT" // Funny. Didn't Laugh
 export type Attribute = "" | "NOT" | "LS-CANCEL";
 export type Target = "" | "AllPlayers" | "Victim" | "Shooter" | "Damager" | "Killer" | "Default" | "Selection" | "Projectile" | "LastEntity";
 export type Direction = "open" | "close";
