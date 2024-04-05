@@ -24,6 +24,7 @@ export interface ActionDump {
     particles: Particle[];
     potions: Potion[];
 }
+
 export interface CodeBlock {
     name: string;
     identifier: CodeBlockIdentifier;
@@ -102,6 +103,7 @@ export interface ParticleCategory {
     category: ParticleCategoryName;
     fields: particleField[];
 }
+
 export type ParticleCategoryName = 'Ambient Particles' | 'Entity Behavior Particles' | 'Ambient Entity Particles' | 'Entity Attack Particles' | 'Liquid Particles' | 'Ambient Block Particles' | 'Block Behavior Particles';
 export type particleField = 'Motion' | 'Motion Variation' | 'Color' | 'Color Variation' | 'Material' | 'Size' | 'Size Variation';
 
@@ -130,6 +132,7 @@ export const ItemTypeColors = {
     bl_tag: '#fbfb54',
     pn_el: '#aaffaa',
 } as const;
+
 export const ItemTypeNames = {
     txt: 'String',
     comp: 'Text',
@@ -147,6 +150,7 @@ export const ItemTypeNames = {
     g_val: 'Game Value',
     pn_el: 'Parameter'
 } as const;
+
 export const ParameterTypes = ['txt','comp','num','loc','vec','snd','part','pot','item', 'any','var','list','dict'] as const;
 export type ParameterTypesType = typeof ParameterTypes[number];
 
